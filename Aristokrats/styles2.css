@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&display=swap');
+
+:root {
+  --primary-color: #FFD700;  /* Yellow */
+  --accent-color: #FFC107;   /* Darker yellow */
+  --text-color: #333333;     /* Dark grey for text */
+  --background-color: #FFFFFF; /* White background */
+  --background-dark: #000000; /* Black background */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-color: #FBC02D; /* HOVER ABOVE THE BUTTON*/
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'MarcellusSC', sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Marcellus SC', serif;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--accent-color);
+  box-shadow: 0 2px 5px var(--shadow-color);
+  font-family: 'Marcellus SC';
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 0rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: rgb(118, 225, 65);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: color 0.4s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 2rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color);
+  margin-top: 60px; /* Adjust based on your header height */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+}
+
+/* Cards */
+.card {
+  background: var(--background-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Flexbox Layout */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.flex-item {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem 0; /* Adjust this value to increase or decrease the footer height */
+    text-align: center;
+}
+
+
+/* Contact Section */
+#contacts {
+  background-color: var(--background-dark);
+  color: var(--background-color);
+}
+
+/* Gallery Section */
+#gallery .card {
+  background-color: #f5f5f5;
+  color: var(--dark-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .flex, .grid {
+    gap: 1rem;
+  }
+
+  .flex-item, .grid > * {
+    min-width: 96%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .button {
+    display: block;
+    width: 96%;
+  }
+}
+.image-container {
+  position: relative;
+}
+
+.watermark::after {
+  content: "Your Watermark Text";
+  position: relative;
+  background-image: image;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.5;
+  color: red;
+  font-size: 20px;
+}
+
